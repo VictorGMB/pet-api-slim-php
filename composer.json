@@ -1,0 +1,12 @@
+{
+    "name": "projeto/api-pets",
+    "autoload": {
+        "psr-4": {
+            "Projeto\\ApiPets\\": "src/"
+        }
+    },
+    "require": {
+        "slim/slim": "^4.15",
+        "slim/psr7": "^1.8"
+    }
+}

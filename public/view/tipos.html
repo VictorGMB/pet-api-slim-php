@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tipos</h1>
+
+    <p><a href="home.html">Inicio</a></p>
+    <p><a href="pets.html">Pets</a></p>
+    <p><a href="../tipos">Listar Tipos (API)</a></p>
+
+    <h2>Cadastrar Tipo (POST /tipos)</h2>
+    <form method="post" action="../tipos">
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text" name="nome">
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <h2>Atualizar e Excluir</h2>
+    <p>Use o Insomnia para:</p>
+    <p>PUT /tipos/{id}</p>
+    <p>DELETE /tipos/{id}</p>
+</body>
+</html>

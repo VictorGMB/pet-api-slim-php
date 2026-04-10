@@ -1,0 +1,30 @@
+services:
+  app:
+    build: .
+    container_name: pet-api-app
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    command: php -S 0.0.0.0:8000 -t public
+    ports:
+      - "8000:8000"
+    environment:
+      DB_HOST: db
+      DB_NAME: pet_api
+      DB_USER: root
+      DB_PASS: ""
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10.11
+    container_name: pet-api-db
+    environment:
+      MYSQL_DATABASE: pet_api
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
+      - pet_api_data:/var/lib/mysql
+
+volumes:
+  pet_api_data:
