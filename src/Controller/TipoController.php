@@ -17,7 +17,7 @@ class TipoController {
 
     public function listar(Request $request, Response $response): Response {
         try {
-            $dados = $this->tipoService::findAll();
+            $dados = $this->tipoService->findAll();
             $response->getBody()->write(json_encode($dados));
             return $response->withHeader('Content-Type', 'application/json')->withStatus(200);
         } catch (Exception $e) {
