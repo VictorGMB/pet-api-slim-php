@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tipos</h1>
+
+    <p><a href="/">Inicio</a></p>
+    <p><a href="/view/pets">Pets</a></p>
+    <p><a href="/tipos">Listar Tipos (API)</a></p>
+
+    <h2>Cadastrar Tipo</h2>
+    <form method="post" action="/view/tipos/criar">
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text" name="nome">
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <h2>Atualizar Tipo</h2>
+    <form method="post" action="/view/tipos/atualizar">
+        <label for="id">ID:</label>
+        <input id="id" type="number" name="id">
+        <br>
+        <label for="nomeUpdate">Novo nome:</label>
+        <input id="nomeUpdate" type="text" name="nome">
+        <input type="submit" value="Atualizar">
+    </form>
+</body>
+</html>
